@@ -17,10 +17,10 @@ router.get('/get/:_id', function(req, res, next) {
 });
 
 
-router.post('/store', function(req, res, next) {
+router.post('/store/:_id', function(req, res, next) {
 
-  
-  productscontroller.productsstore(req,res,next);
+  var _id=req.params._id;
+  productscontroller.productsstore(req,res,_id,next);
 
 });
 
